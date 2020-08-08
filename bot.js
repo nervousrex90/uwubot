@@ -22,6 +22,7 @@ const poggifs = [
 function random_item(items){
 	return items[Math.floor(Math.random()*items.length)];
 }
+
 // create a new Discord client
 const client = new Discord.Client();
 
