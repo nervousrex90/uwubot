@@ -4,6 +4,9 @@
   "description": "owo",
   "main": "bot.js",
   "author": "NervousRex",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
     "discord.js": "^12.2.0",
     "winston": "^3.3.3"

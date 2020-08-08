@@ -1,6 +1,6 @@
 // require the discord.js module
 const Discord = require('discord.js');
-var auth = require('./auth.json');
+var auth = process.env.TOKEN;
 const gifs = [
     'https://media.giphy.com/media/LkfjHA9dIVYgJFmPOF/giphy.gif',
     'https://media.giphy.com/media/iCeG5FbXeuHiE/giphy.gif',
@@ -32,7 +32,7 @@ client.once('ready', () => {
 });
 
 // login to Discord with your app's token
-client.login(auth.token);
+client.login(auth);
 
 client.on('message', message => {
 	if (message.author.bot) return;
