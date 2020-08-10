@@ -44,7 +44,7 @@ client.on('message', message => {
 	if (message.content.toLowerCase().includes('pog')) {
 		message.channel.send(random_item(poggifs));
 	}
-	if (!message.sender === userID){
+	if (message.sender === userID){
 		console.log('got')
 		if (message.content.toLowerCase().includes('tea')) {
 			message.react('742379775938527333')
