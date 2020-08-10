@@ -44,14 +44,16 @@ client.on('message', message => {
 	if (message.content.toLowerCase().includes('pog')) {
 		message.channel.send(random_item(poggifs));
 	}
-	if (message.author.id === userID){
-		if (message.content.toLowerCase().includes('tea')) {
-			const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'thatstheteasis');
+	if (message.guild.id === '663616743838580737'){
+		if (message.author.id === userID){
+			if (message.content.toLowerCase().includes('tea')) {
+				const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'thatstheteasis');
+				message.react(reactionEmoji);
+			}
+		} 	
+		if (message.content.toLowerCase().includes('sadge')) {
+			const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'sadge');
 			message.react(reactionEmoji);
 		}
-	} 	
-	if (message.content.toLowerCase().includes('sadge')) {
-		const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'sadge');
-		message.react(reactionEmoji);
 	}
 });
