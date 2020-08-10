@@ -18,7 +18,7 @@ const poggifs = [
 	'https://media1.tenor.com/images/58fde03dc4c22c6bb55ec0a3c5d6c749/tenor.gif?itemid=10111831',
 	'https://media1.tenor.com/images/ea84f2f5ae572cfa8ec7e37b8d9e05f4/tenor.gif?itemid=17223821',
 ];
-const userID = '143110858015375360'
+const userID = '374655744345374730'
 
 function random_item(items){
 	return items[Math.floor(Math.random()*items.length)];
@@ -45,7 +45,6 @@ client.on('message', message => {
 		message.channel.send(random_item(poggifs));
 	}
 	if (message.author.id === userID){
-		console.log('got')
 		if (message.content.toLowerCase().includes('tea')) {
 			const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'thatstheteasis');
 			message.react(reactionEmoji);
