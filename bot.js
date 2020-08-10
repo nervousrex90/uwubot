@@ -48,5 +48,10 @@ client.on('message', message => {
 		if (message.content.toLowerCase().includes('tea')) {
 			const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'thatstheteasis');
 			message.react(reactionEmoji);
-	}}
+		}
+	} 	
+	if (message.content.toLowerCase().includes('sadge')) {
+		const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'sadge');
+		message.react(reactionEmoji);
+	}
 });
