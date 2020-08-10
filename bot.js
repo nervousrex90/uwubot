@@ -47,6 +47,7 @@ client.on('message', message => {
 	if (message.author.id === userID){
 		console.log('got')
 		if (message.content.toLowerCase().includes('tea')) {
-			message.react('742379775938527333')
+			const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'thatstheteasis');
+			message.react(reactionEmoji);
 	}}
 });
