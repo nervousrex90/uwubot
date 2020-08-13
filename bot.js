@@ -46,7 +46,7 @@ client.on('message', message => {
 	}
 	if (message.guild.id === '663616743838580737'){
 		if (message.author.id === userID){
-			if (message.content.toLowerCase().includes('tea')) {
+			if (message.content.toLowerCase() === ('tea')) {
 				const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'thatstheteasis');
 				message.react(reactionEmoji);
 			}
