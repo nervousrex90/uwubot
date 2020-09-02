@@ -56,4 +56,9 @@ client.on('message', message => {
 			message.react(reactionEmoji);
 		}
 	}
+	if (message.guild.id === '740929953411104770'){
+		if (message.content.toLowerCase().includes('rock and stone')) {
+				message.reply("Rock and Stone!"));
+		}
+	} 
 });
