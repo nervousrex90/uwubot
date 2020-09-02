@@ -58,7 +58,7 @@ client.on('message', message => {
 	}
 	if (message.guild.id === '740929953411104770'){
 		if (message.content.toLowerCase().includes('rock and stone')) {
-			message.channel.send("Rock and Stone!"));
+				message.reply("Rock and Stone!"));
 		}
 	} 
 });
