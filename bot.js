@@ -21,6 +21,7 @@ const poggifs = [
 ];
 const userID = '374655744345374730'
 
+
 function random_item(items){
 	return items[Math.floor(Math.random()*items.length)];
 }
@@ -44,6 +45,13 @@ client.on('message', message => {
 	}
 	if (message.content.toLowerCase().includes('pog')) {
 		message.channel.send(random_item(poggifs));
+	}
+	if (message.content.includes('1v1 me')) {
+		let user = message.mentions.users.first().name;
+		let sender = message.author.name; 
+		const userscore = Math.floor((Math.random()*100+1)/2);
+		const senderscore = Math.floor((Math.random()*100+1)/2);
+		message.channel.send(`Match Result\n${sender}: ${senderscore} | ${user}: ${userscore}`);
 	}
 	if (message.guild.id === '663616743838580737'){
 		if (message.author.id === userID){
