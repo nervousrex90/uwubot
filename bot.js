@@ -47,8 +47,8 @@ client.on('message', message => {
 		message.channel.send(random_item(poggifs));
 	}
 	if (message.content.includes('1v1 me')) {
-		let user = message.mentions.users.first().name;
-		let sender = message.author.name; 
+		let user = message.mentions.users.first();
+		let sender = message.author; 
 		const userscore = Math.floor((Math.random()*100+1)/2);
 		const senderscore = Math.floor((Math.random()*100+1)/2);
 		message.channel.send(`Match Result\n${sender}: ${senderscore} | ${user}: ${userscore}`);
