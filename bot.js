@@ -22,6 +22,13 @@ const poggifs = [
 const catjam = [
 	'https://media1.tenor.com/images/ad8183f947907fff72624b99098b368f/tenor.gif?itemid=17946989'
 ];
+const shaxxquote = [
+	"The Crucible rewards persistence.",
+	"Another battle won. Onto the next fight",
+	"Haha! Is that what victory smells like?",
+	"I know total domination when I see it! Superb!",
+	"Skill is its own weapon. You wield it well.",
+];
 const userID = '374655744345374730'
 
 
@@ -58,8 +65,16 @@ client.on('message', message => {
 		if (user === undefined) return;
 		const userscore = Math.floor((Math.random()*100+1)/2);
 		const senderscore = Math.floor((Math.random()*100+1)/2);
-		message.channel.send(`Match Result\n${sender}: ${senderscore} | ${user}: ${userscore}`);
-	}
+		message.channel.send({embed: {
+		color: 7419530,
+		title: "Match Results",
+		description: ${sender}: ${senderscore} | ${user}: ${userscore},
+		timestamp: new Date(),
+		footer: {
+			text: shaxxquote
+		}
+		}
+	}});
 	if (message.guild.id === '663616743838580737'){
 		if (message.author.id === userID){
 			if (message.content.toLowerCase() === ('tea')) {
