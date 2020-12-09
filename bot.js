@@ -68,7 +68,7 @@ client.on('message', message => {
 		message.channel.send({embed: {
 		color: 7419530,
 		title: "Match Results",
-		description: ${sender}: ${senderscore} | ${user}: ${userscore},
+		description: `${sender}: ${senderscore} | ${user}: ${userscore}`,
 		timestamp: new Date(),
 		footer: {
 			text: shaxxquote
