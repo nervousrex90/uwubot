@@ -66,15 +66,15 @@ client.on('message', message => {
 		const userscore = Math.floor((Math.random()*100+1)/2);
 		const senderscore = Math.floor((Math.random()*100+1)/2);
 		message.channel.send({embed: {
-		color: 7419530,
-		title: "Match Results",
-		description: `${sender}: ${senderscore} | ${user}: ${userscore}`,
-		timestamp: new Date(),
-		footer: {
-			text: shaxxquote
+			color: 7419530,
+			title: "Match Results",
+			description: `${sender}: ${senderscore} | ${user}: ${userscore}`,
+			timestamp: new Date(),
+			footer: {
+				text: shaxxquote
+			}
 		}
-		}
-	}});
+	})};
 	if (message.guild.id === '663616743838580737'){
 		if (message.author.id === userID){
 			if (message.content.toLowerCase() === ('tea')) {
