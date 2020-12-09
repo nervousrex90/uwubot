@@ -71,7 +71,7 @@ client.on('message', message => {
 			description: `${sender}: ${senderscore} | ${user}: ${userscore}`,
 			timestamp: new Date(),
 			footer: {
-				text: shaxxquote
+				text: random_item(shaxxquote)
 			}
 		}
 	})};
