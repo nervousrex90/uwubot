@@ -19,6 +19,9 @@ const poggifs = [
 	'https://media1.tenor.com/images/9428971d6d175764dc13c719740114e1/tenor.gif?itemid=19168029',
 	'https://media1.tenor.com/images/30e1029fd63cb44bdb22e721d8454792/tenor.gif?itemid=17487624',
 ];
+const catjam = [
+	'https://media1.tenor.com/images/ad8183f947907fff72624b99098b368f/tenor.gif?itemid=17946989'
+];
 const userID = '374655744345374730'
 
 
@@ -45,6 +48,9 @@ client.on('message', message => {
 	}
 	if (message.content.toLowerCase().includes('pog')) {
 		message.channel.send(random_item(poggifs));
+	}
+	if (message.content.toLowerCase().includes('catjam')) {
+		message.channel.send(random_item(catjam));
 	}
 	if (message.content.includes('1v1 me')) {
 		let user = message.mentions.users.first();
