@@ -11,12 +11,12 @@ const gifs = [
 	'https://media.giphy.com/media/hhHcFH0xAduCs/giphy.gif',
 ];
 const poggifs = [
-	'https://media.giphy.com/media/1ykTax6hrAKpTQ0Mnb/giphy.gif',
-	'https://media.giphy.com/media/m48e80jhv4Kk/giphy.gif',
-	'https://media1.tenor.com/images/ac86a2659730f38b5d22a10ac63d8039/tenor.gif?itemid=3557105',
-	'https://media1.tenor.com/images/12e3eeafee0e3ceb87201a2542f72e38/tenor.gif?itemid=3835045',
+	'https://media1.tenor.com/images/2ef17ce6f7755655aad9e3495a312a96/tenor.gif?itemid=18199442',
+	'https://media.tenor.com/images/ffc2249d8ac4c663317e2daee47c9fa0/tenor.gif',
+	'https://media1.tenor.com/images/1480f2099b3b09fd45036ac47e724f6d/tenor.gif?itemid=18394478',
+	'https://media1.tenor.com/images/e6cfffbcc6a22eb1843f2d15d2ebc2f5/tenor.gif?itemid=18789648',
 	'https://media1.tenor.com/images/58fde03dc4c22c6bb55ec0a3c5d6c749/tenor.gif?itemid=10111831',
-	'https://media1.tenor.com/images/ded88848be37f78d5183dec89b714d96/tenor.gif?itemid=9358907',
+	'https://media1.tenor.com/images/9428971d6d175764dc13c719740114e1/tenor.gif?itemid=19168029',
 	'https://media1.tenor.com/images/30e1029fd63cb44bdb22e721d8454792/tenor.gif?itemid=17487624',
 ];
 const userID = '374655744345374730'
