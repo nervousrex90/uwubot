@@ -19,6 +19,13 @@ const poggifs = [
 	'https://media1.tenor.com/images/9428971d6d175764dc13c719740114e1/tenor.gif?itemid=19168029',
 	'https://media1.tenor.com/images/30e1029fd63cb44bdb22e721d8454792/tenor.gif?itemid=17487624',
 ];
+const pepegifs = [
+	'https://media1.tenor.com/images/f550faf07f1493f22e1daf93568eadd3/tenor.gif?itemid=12683546',
+	'https://media1.tenor.com/images/bf9c687cbaf1b5b2ef3caa9075a6bae8/tenor.gif?itemid=17946795',
+	'https://media1.tenor.com/images/82168e2a49530193a66b0396f925aba0/tenor.gif?itemid=18805786',
+	'https://media1.tenor.com/images/d1dbb3a232bd162527ff0ae6732e5d7e/tenor.gif?itemid=16009739',
+	'https://media1.tenor.com/images/66b2e11e4c3f5488b3700dcc273728a7/tenor.gif?itemid=18126506',
+];
 const catjam = [
 	'https://media1.tenor.com/images/ad8183f947907fff72624b99098b368f/tenor.gif?itemid=17946989'
 ];
@@ -58,6 +65,9 @@ client.on('message', message => {
 	}
 	if (message.content.toLowerCase().includes('catjam')) {
 		message.channel.send(random_item(catjam));
+	}
+	if (message.content.toLowerCase().includes('pepe')) {
+		message.channel.send(random_item(pepegifs));
 	}
 	if (message.content.includes('1v1 me')) {
 		let user = message.mentions.users.first();
