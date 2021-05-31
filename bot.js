@@ -2,18 +2,15 @@
 const Discord = require('discord.js');
 var auth = process.env.TOKEN;
 const uwureaction = [
-    'message.guild.emojis.cache.find(emoji => emoji.name === 'muwu'',
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'CitrusUWU'',
+    'muwu',
+	'CitrusUWU'
 ];
 const pogreaction = [
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'rivenpog'',
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'DipsPog'',
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'rivenpog'',
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'hyperpogcat'',
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'poggies'',
+	'rivenpog',
+	'DipsPog'
 ];
 const pepereaction = [
-	'message.guild.emojis.cache.find(emoji => emoji.name === 'PepeLazerREEEE'',
+	'PepeLazerREEEE'
 ];
 const catjam = [
 	'https://media1.tenor.com/images/ad8183f947907fff72624b99098b368f/tenor.gif?itemid=17946989'
@@ -47,16 +44,35 @@ client.login(auth);
 client.on('message', message => {
 	if (message.author.bot) return;
 	if (message.content.toLowerCase().includes('uwu')) {
-		message.react(uwureaction));
+		try {
+			let uwu_emoji = message.guild.emojis.cache.find(emoji => emoji.name === random_item(uwureaction));
+			message.react(uwu_emoji);
+		} catch(error) {
+			console.log(`Tried to react with but it failed: ${error}`);
+			message.react('🔴');
+		}
 	}
 	if (message.content.toLowerCase().includes('pog')) {
-		message.react(pogreaction));
+		try {
+			let pog_emoji = message.guild.emojis.cache.find(emoji => emoji.name === random_item(pogreaction));
+			message.react(pog_emoji);
+		} catch(error) {
+			console.log(`Tried to react with but it failed: ${error}`);
+			message.react('🔴');
+		}
+
+	}
+	if (message.content.toLowerCase().includes('pepe')) {
+		try {
+			let pepe_emoji = message.guild.emojis.cache.find(emoji => emoji.name === random_item(pepereaction));
+			message.react(pepe_emoji);
+		} catch(error) {
+			console.log(`Tried to react but it failed: ${error}`);
+			message.react('🔴');
+		}
 	}
 	if (message.content.toLowerCase().includes('catjam')) {
 		message.channel.send(random_item(catjam));
-	}
-	if (message.content.toLowerCase().includes('pepe')) {
-		message.react(pepereaction));
 	}
 	if (message.content.includes('1v1 me')) {
 		let user = message.mentions.users.first();
